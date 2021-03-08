@@ -19,7 +19,7 @@ public class PersonTest {
 
     @Test
     public void asObservableList_modifyList_throwsUnsupportedOperationException() {
-        Person person = new PersonBuilder().build();
+        Person person = new PersonBuilder(remark).build();
         assertThrows(UnsupportedOperationException.class, () -> person.getTags().remove(0));
     }
 
